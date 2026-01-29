@@ -56,3 +56,12 @@ Curso Testes Unitários com ASP.NET Core no nextwave(LuisDEV)
  - Mocks: objeto pré-programado em que são definidas expectativas nas chamadas e respostas que ele possa tratar, com possibilidade de verificação nas chamadas feitas.
  - Stubs: definem respostas "chumbadas" em métodos para simplificar os testes, sobreescrevendo as reais implementações, por exemplo
    - Exemplo: seu método espera um INotificationService, e você cria um FakeNotificationService que implementa essa interface, para substituri na hora de passar para a classe a ser testada
+
+### Padrão de Escrita
+ - AAA: Arrange, Act, Assert
+   - Arrange: preparação para o teste, criação e configuração de mocks
+   - Act: ação a ser testada
+   - Assert: checagem do estado pós-ação
+ - Given_When_Then
+   - Uma classe de teste por caso de uso
+   - Uma classe de teste por classe testada
