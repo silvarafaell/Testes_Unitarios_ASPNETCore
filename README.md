@@ -28,3 +28,12 @@ Curso Testes Unitários com ASP.NET Core no nextwave(LuisDEV)
    - Documentação de regras de negócio.
    - Melhor desenho de código.
    - Teste Fraco é valida as regras de negocio, valida apenas o caminho feliz.
+
+### Desafios na Implementação
+ - Códigos defíceis de se testar
+ - Falta de automação (SonarQube, Jenkins, Azure DevOps, AWS CodePipeline)
+ - Limitação técnica
+ - Ego e sabotagem dos desenvolvedores (fator humano)
+ - Falta de clareza no processo de desenvolvimento
+ - Prazos curtos
+ - Cultura da empresa
