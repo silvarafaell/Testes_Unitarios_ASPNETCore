@@ -37,3 +37,16 @@ Curso Testes Unitários com ASP.NET Core no nextwave(LuisDEV)
  - Falta de clareza no processo de desenvolvimento
  - Prazos curtos
  - Cultura da empresa
+
+ ### Como testar código ruim ?
+  - Antes de se testar código ruim, precisamos realizar uma refatoração, afinal, é comum encontrar código fortemente acoplado a implementações de componentes externos, como:
+    - Banco de dados
+    - APIs externas
+    - Serviços de nuvem
+  - O ideal é aplicar técnicas de refatoração!
+  - Uma técnica bem simples mas muito eficiente é:
+    - Extrair métodos
+    - Extrair classe
+    - Extrair Interface
+    - Substituir no código cliente pelo uso da interface via injeção de dependência
+      - Em muitas situações, será necessário utilizar o container IOC do framework
