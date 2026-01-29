@@ -50,3 +50,9 @@ Curso Testes Unitários com ASP.NET Core no nextwave(LuisDEV)
     - Extrair Interface
     - Substituir no código cliente pelo uso da interface via injeção de dependência
       - Em muitas situações, será necessário utilizar o container IOC do framework
+
+### Dummies, Mocks, Stubs
+ - Dummies: dados fakes, geralmente criados para apenas serem passados em alguma chamada do método de interesse.
+ - Mocks: objeto pré-programado em que são definidas expectativas nas chamadas e respostas que ele possa tratar, com possibilidade de verificação nas chamadas feitas.
+ - Stubs: definem respostas "chumbadas" em métodos para simplificar os testes, sobreescrevendo as reais implementações, por exemplo
+   - Exemplo: seu método espera um INotificationService, e você cria um FakeNotificationService que implementa essa interface, para substituri na hora de passar para a classe a ser testada
