@@ -65,3 +65,22 @@ Curso Testes Unitários com ASP.NET Core no nextwave(LuisDEV)
  - Given_When_Then
    - Uma classe de teste por caso de uso
    - Uma classe de teste por classe testada
+
+### Fundamentos de xUnit
+ - xUnit é uma framework de teste unitário para .NET, projetado para ser simples e extensível
+ - Historico:
+   - Criado por Brad Wilson e Jim Newkirk, que também contribuíram para NUnit.
+ - Objetivo:
+   - Promover práticas de teste modernas e padrões de código limpo.
+ - Componentes:
+   - Classe de Teste: Contém métodos de teste.
+   - Método de Teste: Um método que verifica uma funcionalidade específica.
+ - Atributos principais:
+   - Fact: Usado para indicar que um método é um teste de unidade.
+   - Theory, InlineData e MemberData: Usados para testes parametrizados.
+ - Assertivas:
+   - Principais Métodos:
+     - Assert.Equal(expected, actual): Verifica se dois valores são iguais.
+     - Assert.NotEqual(notExpected, actual): Verifica se dois valores não são iguais.
+     - Assert.True(condition): Verifica se confição é verdadeira.
+     - Assert.False(condition): Verifica se a confição é falsa.
