@@ -84,3 +84,15 @@ Curso Testes Unitários com ASP.NET Core no nextwave(LuisDEV)
      - Assert.NotEqual(notExpected, actual): Verifica se dois valores não são iguais.
      - Assert.True(condition): Verifica se confição é verdadeira.
      - Assert.False(condition): Verifica se a confição é falsa.
+
+### Fundamentos de NSubstitute
+ - NSubstitute é uma biblioteca para criação de objetos substitutos (mocks) usados em testes unitários.
+ - Objetivo: Facilitar a substituição de dependências em testes unitários, permitindo a simulação de comportamentos e verificação de interações
+ - Características
+   - Sintaxe Simples e Intuitiva: Uso de expressões lambda para configuração e verificação
+   - Suporte para Proxies Dinâmicos: Criação de objetos substitutos sem a necessidade de configuração explícita.
+   - Interação com Diversos Frameworks de Teste: Compativel com xUnit, NUnit, MSTest, entre outros
+ - Principais usos:
+   - Substituição de Dependências: Substituição de dependencias para isolar a unidade sendo testada.
+   - Simulação de Comportamento Complexos: Quanto métodos têm comportamentos complexos ou dependem de serviços externos
+   - Verificação de Interações: Verificar se métodos são chamados corretamente surante a execução do teste
