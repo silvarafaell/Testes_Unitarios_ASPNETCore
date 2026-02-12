@@ -96,3 +96,16 @@ Curso Testes Unitários com ASP.NET Core no nextwave(LuisDEV)
    - Substituição de Dependências: Substituição de dependencias para isolar a unidade sendo testada.
    - Simulação de Comportamento Complexos: Quanto métodos têm comportamentos complexos ou dependem de serviços externos
    - Verificação de Interações: Verificar se métodos são chamados corretamente surante a execução do teste
+
+### Fundamentos de Moq
+ - Moq é uma biblioteca amplamente utilizada para criação de mocks, stubs e fakes em testes unitários no ecossistema .NET
+ - Objetivo: Facilitar a substituição de dependências em testes de unidade, permitindo a simulação de comportamentos, a verificação de interações e a criação de testes mais isolados e confiáveis
+ - Características:
+   - Sintaxe Simples e Intuitiva: Uso de expressões lambda para configuração e verificação.
+   - Mocks Fortemente Tipados: Permite criar objettos substitutos fortemente tipados, garantindo maiss segurança e fluidez ao escrever testes.
+   - Configuração Dinâmica de Retornos: Possibilidade de configurar facilmente comportamentos como retornos condicionais, exceções lançadas, ou execução de callbacks.
+   - Integração com Diversos Frameworks de Teste: Compatível com xUnit, NUnit, MSTest, entre outros.
+ - Principais usos:
+   - Substituição de Dependências: Substituição de dependências para isolar a unidade sendo testada
+   - Simulação de Comportamentos Complexos: Quando métodos têm comportamentos complexos ou dependem de serviços externos
+   - Verificação de interações: Verificar se métodos são chamados corretamente durante a execução do teste
