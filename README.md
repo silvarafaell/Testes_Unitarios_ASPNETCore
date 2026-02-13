@@ -125,3 +125,28 @@ Curso Testes Unitários com ASP.NET Core no nextwave(LuisDEV)
    - .Should().BeEmpty() / Should().NotBeEmpty() / .Should().Contain() - Verifica se uma coleção contém está ou não vazia, se contém um item, respectivamente.
    - .Should().Throw<Exception>() - Verifica se uma exceção especifica foi lançada
    - .Should().BeEquivalentTo() - Verifica equivalencia profunda de ojbetos. 
+
+
+### Geração de Dados com Bogus
+ - Bogus é uma biblioteca .NET para gerar dados fictícios (fake data) de maneira fácil e rápida, ideal para testes, prototipação e preenchimento de banco de dados
+ - Objetivo:
+   - Ajudar a criar dados realistas paara simular cenários de uso, garantindo maior confiabilidade em testes e aplicações de demonnstração.
+ - Características:
+   - Suporte a diferentes tipos de dados (nomes, endereços, datas, numeros, etc)
+   - Localização para gerar dados específicos de culturas (ex: en-US, pt-BR)
+   - Configuração simples e intuitiva
+ - Principais Métodos
+   - .Name.FirstName() - Gera um primeiro nome
+   - .Name.LastName() - Gera um sobrenome
+   - .Address.City() - Gera um nome de cidade
+   - .Phone.PhoneNumber() - Gera um número de telefone
+   - .Data.Past() - Gera uma data no passado
+   - .Finance.CreditCardNumber() - Gera numeros de cartão de crédito válidos
+   - .Internet.Email() - Gera um endereço de email
+   - Internet.UserName() - Gera um nome de usuário.
+   - Depois muitos mais métodos
+ - Também permite a definição de regras customizadas para a geração de nomes, como:
+   - Identificador auto-incremento
+   - Seleção aleatório a partir de uma coleção definida de itens
+   - Número aleatório a partir de um intervalo especifico
+   - Entre outras regras personalizadas 
