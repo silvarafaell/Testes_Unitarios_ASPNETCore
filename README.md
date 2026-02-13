@@ -109,3 +109,19 @@ Curso Testes Unitários com ASP.NET Core no nextwave(LuisDEV)
    - Substituição de Dependências: Substituição de dependências para isolar a unidade sendo testada
    - Simulação de Comportamentos Complexos: Quando métodos têm comportamentos complexos ou dependem de serviços externos
    - Verificação de interações: Verificar se métodos são chamados corretamente durante a execução do teste
+
+### Validações com Fluent Assertions
+ - Fluent Assertions é uma biblioteca .NET para escrever assertivas de testes de forma fluida, legível e descritiva.
+ - Objetivo:
+   - Melhorar a clareza e a precisão na verificaçaõ de resultados esperados em testes unitários e de integração.
+ - Características:
+   - Sintaxe fluida e human-readable
+   - Suporte a diferentes tipos de objetos e cenários de teste
+   - Compativel com xUnit, UUnit, MSTest, entre outros.
+   - Possibibilidade de validações customizadas.
+ - Principais Métodos
+   - .Should().Be() - verifica se valores são iguais
+   - .Should().BeNull() / .Should().NotBeNull() - Verifica se valores são ou não nulos
+   - .Should().BeEmpty() / Should().NotBeEmpty() / .Should().Contain() - Verifica se uma coleção contém está ou não vazia, se contém um item, respectivamente.
+   - .Should().Throw<Exception>() - Verifica se uma exceção especifica foi lançada
+   - .Should().BeEquivalentTo() - Verifica equivalencia profunda de ojbetos. 
