@@ -1,6 +1,7 @@
 ﻿using DevFreela.Application.Commands.DeleteProject;
 using DevFreela.Core.Entities;
 using DevFreela.Core.Repositories;
+using DevFreela.UnitTests.Fakes;
 using FluentAssertions;
 using Moq;
 using NSubstitute;
@@ -28,6 +29,32 @@ namespace DevFreela.UnitTests.Application
 
             // Assert
             Assert.True(result.IsSuccess);
+            await repository.Received(1).GetById(1);
+            await repository.Received(1).Update(Arg.Any<Project>());
+        }
+
+        [Fact]
+        public async Task ProjectExists_Delete_Success_NSubstituteBogus()
+        {
+            // Arrange
+            var project = FakeDataHelper.CreateFakeProject();
+
+            var repository = Substitute.For<IProjectRepository>();
+            repository.GetById(1).Returns(Task.FromResult((Project?)project));
+            repository.Update(Arg.Any<Project>()).Returns(Task.CompletedTask);
+
+            var handler = new DeleteProjectHandler(repository);
+
+            var command = new DeleteProjectCommand(1);
+
+            // Act
+            var result = await handler.Handle(command, new CancellationToken());
+
+            // Assert
+            Assert.True(result.IsSuccess);
+
+            result.IsSuccess.Should().BeTrue();
+
             await repository.Received(1).GetById(1);
             await repository.Received(1).Update(Arg.Any<Project>());
         }

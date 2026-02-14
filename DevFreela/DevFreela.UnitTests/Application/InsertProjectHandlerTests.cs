@@ -1,6 +1,7 @@
 ﻿using DevFreela.Application.Commands.InsertProject;
 using DevFreela.Core.Entities;
 using DevFreela.Core.Repositories;
+using DevFreela.UnitTests.Fakes;
 using FluentAssertions;
 using Moq;
 using NSubstitute;
@@ -55,6 +56,34 @@ namespace DevFreela.UnitTests.Application
                 IdClient = 1,
                 IdFreelancer = 2
             };
+
+            var handler = new InsertProjectHandler(repository);
+
+            // Act
+            var result = await handler.Handle(command, new CancellationToken());
+
+            // Assert
+            Assert.True(result.IsSuccess);
+
+            result.IsSuccess.Should().BeTrue();
+
+            Assert.Equal(ID, result.Data);
+
+            result.Data.Should().Be(ID);
+
+            await repository.Received(1).Add(Arg.Any<Project>());
+        }
+
+        [Fact]
+        public async Task InputDataAreOk_Insert_Success_NSubstituteBogus()
+        {
+            // Arrange
+            const int ID = 1;
+
+            var repository = Substitute.For<IProjectRepository>();
+            repository.Add(Arg.Any<Project>()).Returns(Task.FromResult(ID));
+
+            var command = FakeDataHelper.CreateFakeInsertProjectCommand();
 
             var handler = new InsertProjectHandler(repository);
 
